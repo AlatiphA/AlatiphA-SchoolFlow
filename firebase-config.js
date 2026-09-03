@@ -1,14 +1,14 @@
-// AlatiphA Report Cards — Firebase configuration
+// AlatiphA SchoolFlow — Firebase configuration
 //
-// Teacher accounts/login are now ENABLED — the values below are this
-// project's real Firebase credentials (from console.firebase.google.com).
+// This is a SEPARATE Firebase project from AlatiphA Report Cards — keep
+// them independent. Create a new project at console.firebase.google.com,
+// enable Authentication (Email/Password) and Firestore, then paste that
+// project's config values below.
 //
-// To disable accounts again later (revert to fully local-only), just
-// replace apiKey below with the placeholder "YOUR_API_KEY" and the app
-// will detect that and skip the sign-in screen entirely.
+// Until real values are set, the app has no working accounts/sync.
 
 window.FIREBASE_CONFIG = {
-  apiKey: "AIzaSyCgUaDUdWjQXZQgGlZ8AFl8lle8ZCtwSIg",
-  authDomain: "alatipha-report-cards.firebaseapp.com",
-  projectId: "alatipha-report-cards"
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+  projectId: "YOUR_PROJECT_ID"
 };

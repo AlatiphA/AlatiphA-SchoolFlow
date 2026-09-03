@@ -1,7 +1,7 @@
 {
-  "name": "AlatiphA Report Cards",
-  "short_name": "Report Cards",
-  "description": "Offline-first BECE/JHS report card generator for teachers.",
+  "name": "AlatiphA SchoolFlow",
+  "short_name": "SchoolFlow",
+  "description": "Multi-teacher school report card system with roles and cloud sync.",
   "id": "/",
   "start_url": "./index.html",
   "scope": "./",

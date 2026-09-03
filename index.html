@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#16241C">
-<title>AlatiphA Report Cards</title>
+<title>AlatiphA SchoolFlow</title>
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Report Cards">
-<link rel="stylesheet" href="style-19.css">
+<meta name="apple-mobile-web-app-title" content="SchoolFlow">
+<link rel="stylesheet" href="style-1.css">
 <script src="firebase-config.js"></script>
 <script>
   (function () {
@@ -32,7 +32,7 @@
 <div id="authGate">
   <div class="lock-box">
     <img src="icon.svg" alt="" class="lock-seal">
-    <h2 id="authHeading">Teacher Sign In</h2>
+    <h2 id="authHeading">Sign In</h2>
     <div id="authFormFields">
       <input type="email" id="authEmail" placeholder="Email" autocomplete="email">
       <div class="password-field">
@@ -48,7 +48,43 @@
     </div>
     <p id="authSyncingMsg" class="hint hidden">Syncing your data from the cloud…</p>
     <p id="authError" class="lock-error hidden"></p>
-    <p class="hint">Signing in syncs your classes, students, grades, subjects, remarks and staff across every device you log into. Photos, signatures, and the school logo stay local to each device. Guest mode keeps everything on this device only.</p>
+    <p class="hint">Signing in connects you to your school. Guest mode keeps everything on this device only, with no school.</p>
+  </div>
+</div>
+
+<div id="schoolChoiceGate">
+  <div class="lock-box">
+    <img src="icon.svg" alt="" class="lock-seal">
+    <h2>Register or Join a School</h2>
+
+    <div class="school-choice-section">
+      <h3 class="subsection-title">Head Teacher — Register a School</h3>
+      <input type="text" id="regSchoolName" placeholder="School name">
+      <input type="text" id="regSchoolAddress" placeholder="Address (optional)">
+      <input type="text" id="regSchoolEmail" placeholder="Email (optional)">
+      <button id="registerSchoolBtn" class="btn-primary">Create School</button>
+    </div>
+
+    <p class="school-choice-divider">— or —</p>
+
+    <div class="school-choice-section">
+      <h3 class="subsection-title">Teacher — Join with a Code</h3>
+      <input type="text" id="joinCodeInput" placeholder="Join code (e.g. TML-4X9K)">
+      <button id="joinSchoolBtn" class="btn-primary">Join School</button>
+    </div>
+
+    <p id="schoolChoiceError" class="lock-error hidden"></p>
+    <p class="hint">Registering a school makes you its Head Teacher — you'll get a join code to share with your teachers. Joining with a code sends a request that your Head Teacher must approve before you get access.</p>
+    <button type="button" id="schoolChoiceLogoutBtn" class="btn-text">Log Out</button>
+  </div>
+</div>
+
+<div id="pendingGate">
+  <div class="lock-box">
+    <img src="icon.svg" alt="" class="lock-seal">
+    <h2>Waiting for Approval</h2>
+    <p class="hint">Your request to join this school has been sent. Your Head Teacher needs to approve you and assign your classes before you can get in — check back after they've had a chance to do that.</p>
+    <button type="button" id="pendingLogoutBtn" class="btn-text">Log Out</button>
   </div>
 </div>
 
@@ -69,7 +105,7 @@
     </button>
     <span class="brand">
       <img src="icon.svg" alt="" class="seal">
-      <span id="brandText">AlatiphA Report Cards</span>
+      <span id="brandText">AlatiphA SchoolFlow</span>
     </span>
   </div>
   <div class="topbar-right">
@@ -174,6 +210,7 @@
     <div class="backup-section">
       <h3 class="subsection-title">Cloud Sync</h3>
       <div id="cloudSyncStatus"></div>
+      <div id="joinCodeDisplay" class="hidden"></div>
       <button id="syncNowBtn" class="btn-primary hidden">Sync Now</button>
     </div>
   </section>
@@ -349,6 +386,6 @@
 <script src="https://www.gstatic.com/firebasejs/12.17.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/12.17.1/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore-compat.js"></script>
-<script src="app-30.js"></script>
+<script src="app-1.js"></script>
 </body>
 </html>
