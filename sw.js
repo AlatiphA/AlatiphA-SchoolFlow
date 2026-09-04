@@ -1,6 +1,6 @@
 // AlatiphA SchoolFlow — service worker
 // Keep CACHE_NAME's version in sync with APP_VERSION in app-1.js
-const CACHE_NAME = 'schoolflow-cache-v1';
+const CACHE_NAME = 'schoolflow-cache-vv1';
 
 const APP_SHELL = [
   './',
