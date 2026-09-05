@@ -12,7 +12,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="SchoolFlow">
-<link rel="stylesheet" href="style-2.css">
+<link rel="stylesheet" href="style-3.css">
 <script src="firebase-config.js"></script>
 <script>
   (function () {
@@ -129,6 +129,7 @@
         <div id="profileTermYear" class="profile-term-year">—</div>
         <div id="profileAccountLine" class="profile-account-line">—</div>
         <button type="button" id="profileSetupLink" class="profile-link">Go to Setup</button>
+        <button type="button" id="profileTourBtn" class="profile-link">Show Guided Tour</button>
         <button type="button" id="profileLoginBtn" class="profile-link hidden">Log In</button>
         <button type="button" id="logoutBtn" class="profile-link profile-link-danger hidden">Log Out</button>
       </div>
@@ -137,6 +138,20 @@
 </header>
 
 <main id="app">
+
+  <div id="tourOverlay" class="hidden">
+    <div class="tour-box">
+      <h2 id="tourTitle">Welcome</h2>
+      <p id="tourBody" class="hint"></p>
+      <div id="tourDots" class="tour-dots"></div>
+      <div class="tour-actions">
+        <button type="button" id="tourBackBtn" class="btn-text hidden">Back</button>
+        <button type="button" id="tourSkipBtn" class="btn-text">Skip</button>
+        <button type="button" id="tourNextBtn" class="btn-primary">Next</button>
+      </div>
+    </div>
+  </div>
+
 
   <!-- HOME DASHBOARD -->
   <section id="view-home" class="view">
@@ -402,6 +417,6 @@
 <script src="https://www.gstatic.com/firebasejs/12.17.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/12.17.1/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore-compat.js"></script>
-<script src="app-3.js"></script>
+<script src="app-4.js"></script>
 </body>
 </html>

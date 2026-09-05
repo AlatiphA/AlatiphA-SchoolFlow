@@ -1,12 +1,12 @@
 // AlatiphA SchoolFlow — service worker
-// Keep CACHE_NAME's version in sync with APP_VERSION in app-3.js
-const CACHE_NAME = 'schoolflow-cache-v3';
+// Keep CACHE_NAME's version in sync with APP_VERSION in app-4.js
+const CACHE_NAME = 'schoolflow-cache-v4';
 
 const APP_SHELL = [
   './',
   './index.html',
-  './style-2.css',
-  './app-3.js',
+  './style-3.css',
+  './app-4.js',
   './firebase-config.js',
   './manifest.json',
   './icon.svg',
