@@ -12,7 +12,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="SchoolFlow">
-<link rel="stylesheet" href="style-1.css">
+<link rel="stylesheet" href="style-2.css">
 <script src="firebase-config.js"></script>
 <script>
   (function () {
@@ -85,6 +85,15 @@
     <h2>Waiting for Approval</h2>
     <p class="hint">Your request to join this school has been sent. Your Head Teacher needs to approve you and assign your classes before you can get in — check back after they've had a chance to do that.</p>
     <button type="button" id="pendingLogoutBtn" class="btn-text">Log Out</button>
+  </div>
+</div>
+
+<div id="disabledGate">
+  <div class="lock-box">
+    <img src="icon.svg" alt="" class="lock-seal">
+    <h2>Access Disabled</h2>
+    <p class="hint">Your access to this school has been disabled by your Head Teacher. Your data is safe — contact them if you believe this is a mistake.</p>
+    <button type="button" id="disabledLogoutBtn" class="btn-text">Log Out</button>
   </div>
 </div>
 
@@ -379,6 +388,13 @@
     </div>
   </section>
 
+  <!-- MANAGE TEACHERS (Head Teacher only) -->
+  <section id="view-manage-teachers" class="view hidden">
+    <h2>Manage Teachers</h2>
+    <p class="hint">Approve pending requests (assigning their classes as you go), or disable/reactivate a teacher already in the school. Disabling never deletes their data — it just blocks their access.</p>
+    <ul id="manageTeachersList" class="list"></ul>
+  </section>
+
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
@@ -386,6 +402,6 @@
 <script src="https://www.gstatic.com/firebasejs/12.17.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/12.17.1/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore-compat.js"></script>
-<script src="app-1.js"></script>
+<script src="app-2.js"></script>
 </body>
 </html>
