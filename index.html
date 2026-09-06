@@ -12,7 +12,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="SchoolFlow">
-<link rel="stylesheet" href="style-3.css">
+<link rel="stylesheet" href="style-4.css">
 <script src="firebase-config.js"></script>
 <script>
   (function () {
@@ -88,12 +88,22 @@
   </div>
 </div>
 
-<div id="disabledGate">
+<div id="suspendedGate">
   <div class="lock-box">
     <img src="icon.svg" alt="" class="lock-seal">
-    <h2>Access Disabled</h2>
-    <p class="hint">Your access to this school has been disabled by your Head Teacher. Your data is safe — contact them if you believe this is a mistake.</p>
-    <button type="button" id="disabledLogoutBtn" class="btn-text">Log Out</button>
+    <h2>Access Suspended</h2>
+    <p class="hint">Your access to this school has been suspended by your Head Teacher. Your data is safe — contact them if you believe this is a mistake.</p>
+    <button type="button" id="suspendedLogoutBtn" class="btn-text">Log Out</button>
+  </div>
+</div>
+
+<div id="rejectedGate">
+  <div class="lock-box">
+    <img src="icon.svg" alt="" class="lock-seal">
+    <h2>Request Rejected</h2>
+    <p class="hint">Your request to join this school was not approved. You can try a different join code, or contact the school directly.</p>
+    <button type="button" id="rejectedRetryBtn" class="btn-primary">Try a Different Code</button>
+    <button type="button" id="rejectedLogoutBtn" class="btn-text">Log Out</button>
   </div>
 </div>
 
@@ -160,6 +170,7 @@
       <p id="welcomeSubtext" class="welcome-subtext">Here's what's happening with your classes.</p>
     </div>
     <div id="statsSummary" class="stats-summary"></div>
+    <div id="teacherDashboard" class="teacher-dashboard hidden"></div>
     <div class="quick-access-list" id="quickAccessList"></div>
   </section>
 
@@ -417,6 +428,6 @@
 <script src="https://www.gstatic.com/firebasejs/12.17.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/12.17.1/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore-compat.js"></script>
-<script src="app-4.js"></script>
+<script src="app-5.js"></script>
 </body>
 </html>
