@@ -58,23 +58,24 @@
     <h2>Register or Join a School</h2>
 
     <div class="school-choice-section">
-      <h3 class="subsection-title">Head Teacher — Register a School</h3>
+      <h3 class="subsection-title">Teacher — Join with a Code</h3>
+      <p class="hint">If your school is already set up in this app, use this. Ask your Head Teacher for the join code.</p>
+      <input type="text" id="joinCodeInput" placeholder="Join code (e.g. TML-4X9K)">
+      <button id="joinSchoolBtn" class="btn-primary">Join School</button>
+    </div>
+
+    <p class="school-choice-divider">— or —</p>
+
+    <div class="school-choice-section">
+      <h3 class="subsection-title">Head Teacher — Register a New School</h3>
+      <p class="hint">Only use this if your school has never been set up in this app before. This creates a brand-new, separate school — if you meant to join one that already exists, use "Join with a Code" above instead.</p>
       <input type="text" id="regSchoolName" placeholder="School name">
       <input type="text" id="regSchoolAddress" placeholder="Address (optional)">
       <input type="text" id="regSchoolEmail" placeholder="Email (optional)">
       <button id="registerSchoolBtn" class="btn-primary">Create School</button>
     </div>
 
-    <p class="school-choice-divider">— or —</p>
-
-    <div class="school-choice-section">
-      <h3 class="subsection-title">Teacher — Join with a Code</h3>
-      <input type="text" id="joinCodeInput" placeholder="Join code (e.g. TML-4X9K)">
-      <button id="joinSchoolBtn" class="btn-primary">Join School</button>
-    </div>
-
     <p id="schoolChoiceError" class="lock-error hidden"></p>
-    <p class="hint">Registering a school makes you its Head Teacher — you'll get a join code to share with your teachers. Joining with a code sends a request that your Head Teacher must approve before you get access.</p>
     <button type="button" id="schoolChoiceLogoutBtn" class="btn-text">Log Out</button>
   </div>
 </div>
@@ -428,6 +429,6 @@
 <script src="https://www.gstatic.com/firebasejs/12.17.1/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/12.17.1/firebase-auth-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/12.17.1/firebase-firestore-compat.js"></script>
-<script src="app-5.js"></script>
+<script src="app-6.js"></script>
 </body>
 </html>
